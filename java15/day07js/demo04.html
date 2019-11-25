@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+    alert("恭喜你, 中奖了, 我是秦始皇 ,请留下手机号 ,我给你打电话 ,给你机会给我打钱 ,我封你为大将军:");
+    var email = prompt("请输入您的邮箱:");
+    var haha  = /^1(3[0-9]|5[012356789]|66|7[012356789]|8[0-9]|9[18])[0-9]{8}$/g;
+    if(haha.test(email)){
+        var start = email.indexOf("@");//获得字符串的开始位置
+        var result = email.substring(0，start);//截取字符串
+        alert(result);
+    }else{
+        //不匹配
+        alert("邮箱不正确");
+    }
+</script>
+</head>
+<body>  
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+</head>
+<body>  
+</body>
+</html>
+
+<script type="text/javascript">
+    var reg =/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+    
+    let email = prompt("请输入您的邮箱:", "");
+    //console.log(email)
+    // alert(email.substring(0, email.indexOf("@")));//截取字符串
+
+    if(email == null){
+
+    }else{
+       if(reg.test(email)){
+            var result=email.substring(0, email.indexOf("@"));
+            alert(result);
+            
+        }else{
+            //不匹配
+            alert("邮箱不正确");
+        } 
+    }
+        
+</script>
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+  <script type="text/javascript">
+    //邮箱正则表达式对象
+    var p =/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+
+    //2.  接收用户输入的内容
+    var phone = prompt("请输入邮箱");
+
+    alert(phone.slice(0,phone.indexOf("@")));
+    if(phone==null){
+      alert("输入错误.");
+    }else{
+      if(p.test(phone)){
+        alert("邮箱输入正确, 请耐心等候.");
+
+      }else{
+        alert("邮箱输入有误, 请重新输入...");
+      }
+    }
+
+  </script>
+</body>
+</html> -->

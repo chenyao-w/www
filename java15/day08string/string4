@@ -1,0 +1,38 @@
+function x1(str,str1){
+   var str2 = '';
+
+   for(var i = 0;i<str.length;i++){
+    
+      var k = i;
+      for(j=0;j<str1.length;j++){
+       
+         if(str[k]==str1[j]){
+            //console.log("包含"+str1+'下标为'+i);
+            str2 += str[k++];
+            //console.log(str2);
+            if(str2==str1){
+             // console.log(i);
+              console.log("包含"+str1+'下标为'+i);
+              i = i+str1.length-1;
+              
+              str2='';
+             }
+           
+         } else{
+           
+           break;
+         }
+        
+      }
+      if(i==str.length-1){
+       // console.log(i);
+         break;
+
+      }
+		
+   }
+   
+
+
+}
+x1('jkijkafaaf','faaf');
