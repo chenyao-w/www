@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+</head>
+<body>
+    <input placeholder="请输入">
+    <button onclick="x1()">确认</button>
+    <script type="text/javascript">
+    var date = new Date();
+    var Y = date.getFullYear() + '-';  // 获取完整的年份(4位,1970)
+    var M = date.getMonth()+1 + '-';  // 获取月份(0-11,0代表1月,用的时候记得加上1)
+    var D = date.getDate() + ' ';  // 获取日(1-31)
+    var h = date.getHours() + '时';  // 获取小时数(0-23)
+    var m = date.getMinutes() + '分';  // 获取分钟数(0-59)   1573635202614 1573635202000
+    var s = date.getSeconds() + '秒';  // 获取秒数(0-59)
+    alert(Y+M+D+h+m+s);
+    function x1(){
+        var a = document.getElementsByTagName("input")[0].value;
+      
+        switch(a){
+            case 'yy' : alert(Y);break;
+            case 'mm' : alert(Y+M);break;
+            case 'dd' : alert(Y+M+D);break;
+            case 'hh' : alert(Y+M+D+h);break;
+            case 'ss' : alert(Y+M+D+h+m);break;
+            case 'mm' : alert(Y+M+D+h+m+s);break;
+        }
+    }
+    </script>
+
+</body>
+</html>
